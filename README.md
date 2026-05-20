@@ -2,17 +2,24 @@
 
 This repository exposes User Stories in JSON format.
 
-## Endpoints with GitHub Pages
+No GitHub Pages setup is required.
 
-After enabling GitHub Pages:
+## API Endpoints
 
-```txt
-GET https://<USER>.github.io/<REPO>/data/user-stories.json
-GET https://<USER>.github.io/<REPO>/data/user-stories/1.json
-GET https://<USER>.github.io/<REPO>/data/user-stories/2.json
-GET https://<USER>.github.io/<REPO>/data/user-stories/3.json
-GET https://<USER>.github.io/<REPO>/data/user-stories/4.json
-GET https://<USER>.github.io/<REPO>/data/user-stories/5.json
+### Get all user stories
+
+```http
+GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-stories.json
+```
+
+### Get user story by id
+
+```http
+GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-stories/1.json
+GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-stories/2.json
+GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-stories/3.json
+GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-stories/4.json
+GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-stories/5.json
 ```
 
 ## Structure
@@ -31,21 +38,24 @@ data/
 ## Fetch example
 
 ```ts
+const BASE_URL =
+  'https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data';
+
 export async function getAllUserStories() {
-  const response = await fetch('/data/user-stories.json');
+  const response = await fetch(`${BASE_URL}/user-stories.json`);
 
   if (!response.ok) {
-    throw new Error('Failed to load user stories');
+    throw new Error('Failed to fetch user stories');
   }
 
   return response.json();
 }
 
 export async function getUserStoryById(id: number) {
-  const response = await fetch(`/data/user-stories/${id}.json`);
+  const response = await fetch(`${BASE_URL}/user-stories/${id}.json`);
 
   if (!response.ok) {
-    throw new Error(`User story ${id} not found`);
+    throw new Error(`Failed to fetch user story with id ${id}`);
   }
 
   return response.json();
