@@ -1,0 +1,18 @@
+{
+  "id": 2,
+  "index": "US-002",
+  "title": "User logout",
+  "description": "As a logged-in user, I want to be able to log out so that I can secure my account.",
+  "constraints": [
+    "The logout button must be accessible from the user menu.",
+    "The active session must be deleted after logout.",
+    "The user must be redirected to the login page.",
+    "Sensitive data must no longer be accessible after logout."
+  ],
+  "acceptanceCriteria": [
+    "Given a logged-in user, when they click logout, then their session is closed.",
+    "Given a logged-out user, when they attempt to access a protected page, then they are redirected to the login page."
+  ],
+  "priority": "medium",
+  "status": "ready"
+}

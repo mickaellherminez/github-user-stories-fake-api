@@ -1,0 +1,19 @@
+{
+  "id": 4,
+  "index": "US-004",
+  "title": "Edit profile",
+  "description": "As a logged-in user, I want to edit my personal information so that I can keep my profile up to date.",
+  "constraints": [
+    "Required fields must be validated before saving.",
+    "The email address must follow a valid format.",
+    "A success message must be displayed after the update.",
+    "In case of a server error, the entered data must not be lost."
+  ],
+  "acceptanceCriteria": [
+    "Given a valid form, when it is submitted, then the profile information is updated.",
+    "Given an invalid form, when it is submitted, then the validation errors are displayed.",
+    "Given a server error, when they submit the form, then an error message is displayed without clearing the form."
+  ],
+  "priority": "high",
+  "status": "ready"
+}

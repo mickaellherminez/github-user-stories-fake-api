@@ -1,0 +1,19 @@
+{
+  "id": 3,
+  "index": "US-003",
+  "title": "View profile",
+  "description": "As a logged-in user, I want to view my profile so that I can check my personal information.",
+  "constraints": [
+    "The profile page must be accessible only to logged-in users.",
+    "The displayed information must come from the official data source.",
+    "Sensitive fields such as the password must never be displayed.",
+    "A loading state must be visible while data is being fetched."
+  ],
+  "acceptanceCriteria": [
+    "Given a logged-in user, when they open the profile page, then their main information is displayed.",
+    "Given a loading error, when they open the profile page, then an error message is displayed.",
+    "Given a logged-out user, when they attempt to open the profile page, then they are redirected to the login page."
+  ],
+  "priority": "medium",
+  "status": "ready"
+}

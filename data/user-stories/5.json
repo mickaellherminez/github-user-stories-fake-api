@@ -1,0 +1,19 @@
+{
+  "id": 5,
+  "index": "US-005",
+  "title": "Password reset",
+  "description": "As a user, I want to reset my password so that I can recover access to my account if I have forgotten it.",
+  "constraints": [
+    "The user must provide a valid email address.",
+    "A reset email must be sent only if the address is known.",
+    "The reset link must expire after a limited duration.",
+    "The new password must comply with the defined security rules."
+  ],
+  "acceptanceCriteria": [
+    "Given an existing email address, when a request is submitted, then a reset email is generated.",
+    "Given an unknown address, when a request is submitted, then a generic message is displayed to prevent account enumeration.",
+    "Given an expired link, when it is used, then the user is prompted to submit a new request."
+  ],
+  "priority": "high",
+  "status": "ready"
+}

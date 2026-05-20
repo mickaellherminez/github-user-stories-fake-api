@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "index": "US-001",
+  "title": "User login",
+  "description": "As a user, I want to be able to log in so that I can access my personal space.",
+  "constraints": [
+    "The user must enter a valid email address.",
+    "The password must contain at least 8 characters.",
+    "An error message must be displayed when credentials are invalid.",
+    "After 5 failed attempts, the account must be temporarily locked."
+  ],
+  "acceptanceCriteria": [
+    "Given an existing user, when they enter valid credentials, then they are redirected to their dashboard.",
+    "Given an unrecognized user, when they attempt to log in, then a clear error message is displayed.",
+    "Given an empty required field, when they submit the form, then the submission is blocked."
+  ],
+  "priority": "high",
+  "status": "ready"
+}

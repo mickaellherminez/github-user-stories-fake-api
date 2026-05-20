@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "index": "US-001",
+    "title": "User login",
+    "description": "As a user, I want to be able to log in so that I can access my personal space.",
+    "constraints": [
+      "The user must enter a valid email address.",
+      "The password must contain at least 8 characters.",
+      "An error message must be displayed when credentials are invalid.",
+      "After 5 failed attempts, the account must be temporarily locked."
+    ],
+    "acceptanceCriteria": [
+      "Given an existing user, when they enter valid credentials, then they are redirected to their dashboard.",
+      "Given an unrecognized user, when they attempt to log in, then a clear error message is displayed.",
+      "Given an empty required field, when they submit the form, then the submission is blocked."
+    ],
+    "priority": "high",
+    "status": "ready"
+  },
+  {
+    "id": 2,
+    "index": "US-002",
+    "title": "User logout",
+    "description": "As a logged-in user, I want to be able to log out so that I can secure my account.",
+    "constraints": [
+      "The logout button must be accessible from the user menu.",
+      "The active session must be deleted after logout.",
+      "The user must be redirected to the login page.",
+      "Sensitive data must no longer be accessible after logout."
+    ],
+    "acceptanceCriteria": [
+      "Given a logged-in user, when they click logout, then their session is closed.",
+      "Given a logged-out user, when they attempt to access a protected page, then they are redirected to the login page."
+    ],
+    "priority": "medium",
+    "status": "ready"
+  },
+  {
+    "id": 3,
+    "index": "US-003",
+    "title": "View profile",
+    "description": "As a logged-in user, I want to view my profile so that I can check my personal information.",
+    "constraints": [
+      "The profile page must be accessible only to logged-in users.",
+      "The displayed information must come from the official data source.",
+      "Sensitive fields such as the password must never be displayed.",
+      "A loading state must be visible while data is being fetched."
+    ],
+    "acceptanceCriteria": [
+      "Given a logged-in user, when they open the profile page, then their main information is displayed.",
+      "Given a loading error, when they open the profile page, then an error message is displayed.",
+      "Given a logged-out user, when they attempt to open the profile page, then they are redirected to the login page."
+    ],
+    "priority": "medium",
+    "status": "ready"
+  },
+  {
+    "id": 4,
+    "index": "US-004",
+    "title": "Edit profile",
+    "description": "As a logged-in user, I want to edit my personal information so that I can keep my profile up to date.",
+    "constraints": [
+      "Required fields must be validated before saving.",
+      "The email address must follow a valid format.",
+      "A success message must be displayed after the update.",
+      "In case of a server error, the entered data must not be lost."
+    ],
+    "acceptanceCriteria": [
+      "Given a valid form, when it is submitted, then the profile information is updated.",
+      "Given an invalid form, when it is submitted, then the validation errors are displayed.",
+      "Given a server error, when they submit the form, then an error message is displayed without clearing the form."
+    ],
+    "priority": "high",
+    "status": "ready"
+  },
+  {
+    "id": 5,
+    "index": "US-005",
+    "title": "Password reset",
+    "description": "As a user, I want to reset my password so that I can recover access to my account if I have forgotten it.",
+    "constraints": [
+      "The user must provide a valid email address.",
+      "A reset email must be sent only if the address is known.",
+      "The reset link must expire after a limited duration.",
+      "The new password must comply with the defined security rules."
+    ],
+    "acceptanceCriteria": [
+      "Given an existing email address, when a request is submitted, then a reset email is generated.",
+      "Given an unknown address, when a request is submitted, then a generic message is displayed to prevent account enumeration.",
+      "Given an expired link, when it is used, then the user is prompted to submit a new request."
+    ],
+    "priority": "high",
+    "status": "ready"
+  }
+]
