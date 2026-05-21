@@ -15,5 +15,8 @@
     "Given an expired link, when it is used, then the user is prompted to submit a new request."
   ],
   "priority": "high",
-  "status": "ready"
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-005-password-reset.png"
+  ]
 }

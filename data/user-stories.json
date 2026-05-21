@@ -16,7 +16,10 @@
       "Given an empty required field, when they submit the form, then the submission is blocked."
     ],
     "priority": "high",
-    "status": "ready"
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-001-user-login.png"
+    ]
   },
   {
     "id": 2,
@@ -34,7 +37,10 @@
       "Given a logged-out user, when they attempt to access a protected page, then they are redirected to the login page."
     ],
     "priority": "medium",
-    "status": "ready"
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-002-user-logout.png"
+    ]
   },
   {
     "id": 3,
@@ -53,7 +59,10 @@
       "Given a logged-out user, when they attempt to open the profile page, then they are redirected to the login page."
     ],
     "priority": "medium",
-    "status": "ready"
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-003-view-profile.png"
+    ]
   },
   {
     "id": 4,
@@ -72,7 +81,10 @@
       "Given a server error, when they submit the form, then an error message is displayed without clearing the form."
     ],
     "priority": "high",
-    "status": "ready"
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-004-edit-profile.png"
+    ]
   },
   {
     "id": 5,
@@ -91,6 +103,9 @@
       "Given an expired link, when it is used, then the user is prompted to submit a new request."
     ],
     "priority": "high",
-    "status": "ready"
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-005-password-reset.png"
+    ]
   }
 ]

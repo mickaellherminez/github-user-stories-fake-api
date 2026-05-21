@@ -15,5 +15,8 @@
     "Given a server error, when they submit the form, then an error message is displayed without clearing the form."
   ],
   "priority": "high",
-  "status": "ready"
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-004-edit-profile.png"
+  ]
 }

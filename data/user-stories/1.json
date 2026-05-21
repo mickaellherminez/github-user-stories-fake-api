@@ -15,5 +15,8 @@
     "Given an empty required field, when they submit the form, then the submission is blocked."
   ],
   "priority": "high",
-  "status": "ready"
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-001-user-login.png"
+  ]
 }

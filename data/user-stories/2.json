@@ -14,5 +14,8 @@
     "Given a logged-out user, when they attempt to access a protected page, then they are redirected to the login page."
   ],
   "priority": "medium",
-  "status": "ready"
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-002-user-logout.png"
+  ]
 }
