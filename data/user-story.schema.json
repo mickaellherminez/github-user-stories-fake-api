@@ -1,0 +1,78 @@
+{
+  "$id": "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-story.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "User Story",
+  "description": "Schema for a user story entry exposed by github-user-stories-fake-api.",
+  "type": "object",
+  "required": [
+    "id",
+    "index",
+    "title",
+    "description",
+    "constraints",
+    "acceptanceCriteria",
+    "priority",
+    "status",
+    "images"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "index": {
+      "type": "string",
+      "pattern": "^US-[0-9]{3}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "acceptanceCriteria": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "ready",
+        "in-progress",
+        "done"
+      ]
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

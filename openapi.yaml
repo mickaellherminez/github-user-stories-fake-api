@@ -1,0 +1,117 @@
+openapi: 3.0.3
+info:
+  title: GitHub User Stories Fake API
+  description: >
+    Static JSON API exposed from GitHub raw content to provide agile user stories
+    for demos, tests, and mock integrations.
+  version: 1.0.0
+servers:
+  - url: https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data
+    description: GitHub Raw content endpoint
+paths:
+  /user-stories.json:
+    get:
+      operationId: getAllUserStories
+      summary: Get all user stories
+      tags:
+        - User Stories
+      responses:
+        "200":
+          description: A list of user stories
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/UserStory"
+  /user-stories/{id}.json:
+    get:
+      operationId: getUserStoryById
+      summary: Get one user story by id
+      tags:
+        - User Stories
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: User story numeric identifier.
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        "200":
+          description: A user story object
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserStory"
+        "404":
+          description: File not found
+components:
+  schemas:
+    UserStory:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - index
+        - title
+        - description
+        - constraints
+        - acceptanceCriteria
+        - priority
+        - status
+        - images
+      properties:
+        id:
+          type: integer
+          minimum: 1
+          example: 1
+        index:
+          type: string
+          pattern: "^US-[0-9]{3}$"
+          example: US-001
+        title:
+          type: string
+          example: User login
+        description:
+          type: string
+          example: As a user, I want to be able to log in so that I can access my personal space.
+        constraints:
+          type: array
+          minItems: 1
+          items:
+            type: string
+          example:
+            - The user must enter a valid email address.
+            - The password must contain at least 8 characters.
+        acceptanceCriteria:
+          type: array
+          minItems: 1
+          items:
+            type: string
+          example:
+            - Given an existing user, when they enter valid credentials, then they are redirected to their dashboard.
+        priority:
+          type: string
+          enum:
+            - low
+            - medium
+            - high
+          example: high
+        status:
+          type: string
+          enum:
+            - draft
+            - ready
+            - in-progress
+            - done
+          example: ready
+        images:
+          type: array
+          minItems: 1
+          items:
+            type: string
+            format: uri
+          example:
+            - https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-001-user-login.png

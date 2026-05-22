@@ -1,0 +1,18 @@
+name: Validate data
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Validate user stories data
+        run: python3 scripts/validate_data.py
