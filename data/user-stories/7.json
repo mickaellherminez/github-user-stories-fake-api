@@ -1,0 +1,21 @@
+{
+  "id": 7,
+  "index": "US-007",
+  "title": "Filtrer les disponibilités",
+  "description": "En tant que patient, je veux filtrer les médecins disponibles dans les 48 prochaines heures afin d'obtenir un rendez-vous rapidement.",
+  "constraints": [
+    "La fenêtre de recherche est limitée aux 48 prochaines heures.",
+    "Les créneaux affichés doivent être réellement disponibles.",
+    "Les horaires passés doivent être exclus."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné des créneaux disponibles, quand le filtre 48 heures est appliqué, alors seuls les créneaux de la fenêtre sont affichés.",
+    "Étant donné des créneaux déjà réservés, quand le filtre est appliqué, alors ils sont exclus des résultats.",
+    "Étant donné qu'aucun créneau ne correspond, quand le filtre est appliqué, alors un message dédié est affiché."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-007-doctolib-48h-filter.png"
+  ]
+}

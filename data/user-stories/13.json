@@ -1,0 +1,21 @@
+{
+  "id": 13,
+  "index": "US-013",
+  "title": "Notification d’annulation médecin",
+  "description": "En tant que patient, je veux être notifié si le médecin annule le rendez-vous afin de pouvoir reprendre un autre créneau.",
+  "constraints": [
+    "Le patient doit être lié au rendez-vous annulé.",
+    "La notification doit partir dès l'annulation.",
+    "Le message doit proposer une action de reprogrammation."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné qu'un médecin annule un rendez-vous, quand l'annulation est enregistrée, alors le patient est notifié.",
+    "Étant donné une application fermée, quand l'annulation survient, alors la notification est mise en file d'attente.",
+    "Étant donné qu'aucun rendez-vous n'existe, quand une annulation est simulée, alors aucun message n'est envoyé."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-013-doctolib-doctor-cancellation.png"
+  ]
+}

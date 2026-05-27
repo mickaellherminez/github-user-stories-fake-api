@@ -1,0 +1,21 @@
+{
+  "id": 17,
+  "index": "US-017",
+  "title": "Consultation historique",
+  "description": "En tant que patient, je veux consulter l'historique de mes rendez-vous afin de retrouver mes anciennes consultations.",
+  "constraints": [
+    "L'historique doit inclure les rendez-vous passés et annulés.",
+    "Les éléments doivent être triés du plus récent au plus ancien.",
+    "Seul le patient concerné doit y accéder."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un patient authentifié, quand il ouvre l'historique, alors ses rendez-vous sont affichés.",
+    "Étant donné qu'aucun rendez-vous n'existe, quand l'historique est ouvert, alors un état vide est affiché.",
+    "Étant donné un utilisateur non autorisé, quand l'historique est demandé, alors l'accès est refusé."
+  ],
+  "priority": "low",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-017-doctolib-history.png"
+  ]
+}

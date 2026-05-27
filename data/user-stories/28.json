@@ -1,0 +1,21 @@
+{
+  "id": 28,
+  "index": "US-028",
+  "title": "Rendez-vous rapide",
+  "description": "En tant que patient, je veux obtenir un rendez-vous rapidement afin d'être soigné au plus vite.",
+  "constraints": [
+    "La notion de rapidité doit rester suffisamment souple.",
+    "Le système doit proposer la première disponibilité pertinente.",
+    "Le parcours ne doit pas imposer d'étape inutile."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné qu'un patient demande un rendez-vous rapide, quand la recherche est lancée, alors les premiers créneaux pertinents sont proposés.",
+    "Étant donné qu'aucun créneau proche n'existe, quand la recherche est lancée, alors des alternatives sont affichées.",
+    "Étant donné qu'un créneau est sélectionné, quand la réservation continue, alors le flux se poursuit normalement."
+  ],
+  "priority": "low",
+  "status": "draft",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-028-doctolib-fast-appointment.png"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": 24,
+  "index": "US-024",
+  "title": "Suppression de compte",
+  "description": "En tant qu'utilisateur, je veux supprimer mon compte afin d'exercer mon droit à l'effacement des données.",
+  "constraints": [
+    "L'utilisateur doit être authentifié.",
+    "Les obligations légales de conservation doivent être respectées.",
+    "La suppression doit être irréversible côté utilisateur."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un utilisateur authentifié, quand il confirme la suppression, alors son compte est supprimé.",
+    "Étant donné des données soumises à conservation légale, quand la suppression est demandée, alors elles sont conservées conformément aux règles.",
+    "Étant donné un utilisateur non authentifié, quand il demande la suppression, alors l'accès est refusé."
+  ],
+  "priority": "high",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-024-doctolib-account-deletion.png"
+  ]
+}

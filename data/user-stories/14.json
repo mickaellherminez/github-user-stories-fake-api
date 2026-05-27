@@ -1,0 +1,21 @@
+{
+  "id": 14,
+  "index": "US-014",
+  "title": "Accès à une téléconsultation",
+  "description": "En tant que patient, je veux rejoindre une téléconsultation vidéo afin de consulter un médecin à distance.",
+  "constraints": [
+    "Le rendez-vous doit être configuré en téléconsultation.",
+    "L'utilisateur doit disposer d'un appareil compatible.",
+    "L'accès doit être limité à l'heure du rendez-vous."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un rendez-vous de téléconsultation à l'heure prévue, quand le patient rejoint la session, alors la salle vidéo s'ouvre.",
+    "Étant donné qu'il est trop tôt, quand le patient tente de rejoindre la session, alors une salle d'attente est affichée.",
+    "Étant donné un appareil incompatible, quand l'accès est tenté, alors un message d'erreur est affiché."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-014-doctolib-teleconsultation.png"
+  ]
+}

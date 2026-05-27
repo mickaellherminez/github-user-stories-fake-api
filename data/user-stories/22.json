@@ -1,0 +1,21 @@
+{
+  "id": 22,
+  "index": "US-022",
+  "title": "Échec de paiement",
+  "description": "En tant que patient, je veux être informé si le paiement échoue afin de pouvoir réessayer avec une autre méthode.",
+  "constraints": [
+    "L'échec doit être clairement signalé.",
+    "L'utilisateur doit pouvoir réessayer.",
+    "Aucune confirmation ne doit être émise en cas d'échec."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un paiement refusé, quand la transaction est traitée, alors un message d'échec est affiché.",
+    "Étant donné un paiement échoué, quand l'utilisateur réessaie avec une autre méthode, alors une nouvelle tentative est possible.",
+    "Étant donné un échec confirmé, quand le flux se termine, alors aucun reçu n'est produit."
+  ],
+  "priority": "high",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-022-doctolib-payment-failure.png"
+  ]
+}

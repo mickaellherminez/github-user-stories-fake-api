@@ -1,0 +1,21 @@
+{
+  "id": 10,
+  "index": "US-010",
+  "title": "Annulation de rendez-vous",
+  "description": "En tant que patient, je veux annuler un rendez-vous afin de libérer le créneau si je ne peux pas venir.",
+  "constraints": [
+    "Le rendez-vous doit appartenir au patient connecté.",
+    "L'annulation doit respecter le délai autorisé.",
+    "Le créneau libéré doit redevenir disponible."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un rendez-vous appartenant au patient, quand l'annulation est confirmée, alors le rendez-vous est supprimé.",
+    "Étant donné un rendez-vous annulé, quand la disponibilité est recalculée, alors le créneau redevient réservable.",
+    "Étant donné un rendez-vous introuvable, quand l'annulation est demandée, alors un message d'erreur est affiché."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-010-doctolib-cancellation.png"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": 20,
+  "index": "US-020",
+  "title": "Gestion des retards",
+  "description": "En tant que médecin, je veux notifier mes patients en cas de retard important afin de les informer avant leur déplacement.",
+  "constraints": [
+    "Le retard doit être déclaré avant l'heure prévue de consultation si possible.",
+    "Les patients concernés doivent être notifiés.",
+    "L'information doit inclure une estimation du délai."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un retard déclaré, quand le médecin valide l'information, alors les patients concernés sont notifiés.",
+    "Étant donné qu'aucun patient n'est concerné, quand un retard est saisi, alors aucune notification n'est envoyée.",
+    "Étant donné une estimation mise à jour, quand le délai change, alors un nouveau message est diffusé."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-020-doctolib-delay-notification.png"
+  ]
+}

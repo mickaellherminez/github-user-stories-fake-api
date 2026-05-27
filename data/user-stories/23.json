@@ -1,0 +1,21 @@
+{
+  "id": 23,
+  "index": "US-023",
+  "title": "Consentement RGPD",
+  "description": "En tant qu'utilisateur, je veux accepter la politique de confidentialité afin d'autoriser le traitement de mes données personnelles.",
+  "constraints": [
+    "Le consentement doit être explicite.",
+    "Le choix doit être horodaté.",
+    "Le refus ne doit pas bloquer les fonctions strictement nécessaires."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné une politique de confidentialité affichée, quand l'utilisateur accepte, alors le consentement est enregistré.",
+    "Étant donné un refus, quand le choix est validé, alors les traitements non essentiels sont désactivés.",
+    "Étant donné qu'aucun choix n'est fait, quand la page est ouverte, alors une demande de consentement reste visible."
+  ],
+  "priority": "high",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-023-doctolib-gdpr-consent.png"
+  ]
+}

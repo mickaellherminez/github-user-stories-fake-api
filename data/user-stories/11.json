@@ -1,0 +1,21 @@
+{
+  "id": 11,
+  "index": "US-011",
+  "title": "Reprogrammation de rendez-vous",
+  "description": "En tant que patient, je veux modifier la date de mon rendez-vous afin de choisir un horaire plus adapté.",
+  "constraints": [
+    "Le rendez-vous initial doit exister.",
+    "Le nouveau créneau doit être disponible.",
+    "La modification doit conserver le dossier du patient."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un rendez-vous existant et un nouveau créneau libre, quand la reprogrammation est validée, alors le rendez-vous est mis à jour.",
+    "Étant donné un nouveau créneau indisponible, quand la reprogrammation est tentée, alors elle est refusée.",
+    "Étant donné un rendez-vous absent, quand la reprogrammation est demandée, alors une erreur est affichée."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-011-doctolib-rescheduling.png"
+  ]
+}

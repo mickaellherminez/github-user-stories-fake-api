@@ -1,0 +1,21 @@
+{
+  "id": 29,
+  "index": "US-029",
+  "title": "Notifications adaptées",
+  "description": "En tant qu'utilisateur, je veux recevoir des notifications adaptées afin d'être correctement informé.",
+  "constraints": [
+    "Le contenu doit dépendre du contexte utilisateur.",
+    "La fréquence et le canal peuvent varier selon les préférences.",
+    "Les notifications inutiles doivent être limitées."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné des préférences utilisateur définies, quand une notification est envoyée, alors son contenu et son canal sont adaptés.",
+    "Étant donné que les notifications sont désactivées, quand un événement survient, alors aucun message n'est diffusé.",
+    "Étant donné un contexte qui change, quand une notification est recalculée, alors le message est ajusté."
+  ],
+  "priority": "low",
+  "status": "draft",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-029-doctolib-adaptive-notifications.png"
+  ]
+}

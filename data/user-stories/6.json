@@ -1,0 +1,21 @@
+{
+  "id": 6,
+  "index": "US-006",
+  "title": "Recherche géographique",
+  "description": "En tant que patient, je veux rechercher des praticiens proches de ma position afin de limiter mes déplacements.",
+  "constraints": [
+    "La position de l'utilisateur doit être autorisée.",
+    "La distance doit être calculée à partir de la localisation courante.",
+    "Les résultats doivent être triés par proximité."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné que la localisation est autorisée, quand la recherche géographique est lancée, alors les praticiens proches sont affichés.",
+    "Étant donné que la localisation est refusée, quand la recherche est lancée, alors un message d'autorisation est affiché.",
+    "Étant donné qu'aucun praticien n'est proche, quand la recherche est lancée, alors un état vide est affiché."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-006-doctolib-geographic-search.png"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": 25,
+  "index": "US-025",
+  "title": "Liste d’attente",
+  "description": "En tant que patient, je veux être placé sur une liste d'attente afin d'être averti si un créneau se libère plus tôt.",
+  "constraints": [
+    "La liste d'attente doit être liée à un créneau complet.",
+    "L'ordre d'inscription doit être conservé.",
+    "L'utilisateur doit pouvoir être averti si une place se libère."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné qu'aucun créneau n'est disponible, quand le patient s'inscrit, alors il est ajouté à la liste d'attente.",
+    "Étant donné qu'une place se libère, quand l'ordre de priorité est calculé, alors les patients sont notifiés dans l'ordre d'inscription.",
+    "Étant donné une inscription déjà existante, quand le patient réessaie, alors la duplication est refusée."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-025-doctolib-waitlist.png"
+  ]
+}

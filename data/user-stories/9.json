@@ -1,0 +1,21 @@
+{
+  "id": 9,
+  "index": "US-009",
+  "title": "Confirmation de rendez-vous",
+  "description": "En tant que patient, je veux recevoir une confirmation après réservation afin de vérifier que mon rendez-vous est bien enregistré.",
+  "constraints": [
+    "La confirmation doit être générée après une réservation réussie.",
+    "Les détails du rendez-vous doivent être exacts.",
+    "La confirmation doit être consultable et partageable."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un rendez-vous créé, quand la réservation est finalisée, alors une confirmation est affichée.",
+    "Étant donné une erreur d'envoi, quand la confirmation ne peut pas partir, alors elle reste consultable dans l'application.",
+    "Étant donné qu'aucune réservation n'existe, quand la page de confirmation est ouverte, alors aucun reçu n'est affiché."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-009-doctolib-confirmation.png"
+  ]
+}

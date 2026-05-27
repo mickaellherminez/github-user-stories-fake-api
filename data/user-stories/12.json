@@ -1,0 +1,21 @@
+{
+  "id": 12,
+  "index": "US-012",
+  "title": "Rappel automatique",
+  "description": "En tant que patient, je veux recevoir un rappel 24 heures avant mon rendez-vous afin de ne pas oublier ma consultation.",
+  "constraints": [
+    "Le rappel doit être envoyé 24 heures avant le rendez-vous.",
+    "Le canal de notification doit suivre les préférences de l'utilisateur.",
+    "Les rappels annulés doivent être supprimés."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un rendez-vous prévu dans 24 heures, quand l'ordonnanceur s'exécute, alors un rappel est envoyé.",
+    "Étant donné qu'un rendez-vous est annulé, quand le rappel est recalculé, alors aucun message n'est envoyé.",
+    "Étant donné des notifications désactivées, quand le rappel arrive à échéance, alors il n'est pas diffusé."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-012-doctolib-reminder.png"
+  ]
+}

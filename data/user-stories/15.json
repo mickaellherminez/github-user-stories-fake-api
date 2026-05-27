@@ -1,0 +1,21 @@
+{
+  "id": 15,
+  "index": "US-015",
+  "title": "Vérification matériel vidéo",
+  "description": "En tant qu'utilisateur, je veux tester ma caméra et mon microphone avant la téléconsultation afin d'éviter les problèmes techniques.",
+  "constraints": [
+    "La caméra et le microphone doivent pouvoir être testés séparément.",
+    "Les permissions du navigateur doivent être détectées.",
+    "Un résultat clair doit être affiché avant la téléconsultation."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné que la caméra et le microphone sont autorisés, quand le test est lancé, alors le contrôle matériel réussit.",
+    "Étant donné qu'une permission est refusée, quand le test est lancé, alors l'erreur correspondante est affichée.",
+    "Étant donné qu'un périphérique est absent, quand le test est lancé, alors un avertissement est affiché."
+  ],
+  "priority": "low",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-015-doctolib-device-check.png"
+  ]
+}

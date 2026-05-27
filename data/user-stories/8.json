@@ -1,0 +1,21 @@
+{
+  "id": 8,
+  "index": "US-008",
+  "title": "Réservation d’un créneau",
+  "description": "En tant que patient, je veux réserver un créneau disponible afin de consulter un professionnel de santé.",
+  "constraints": [
+    "Le créneau doit être libre au moment de la réservation.",
+    "Le patient doit être authentifié.",
+    "Une double réservation du même créneau doit être impossible."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un patient authentifié et un créneau libre, quand la réservation est validée, alors le rendez-vous est créé.",
+    "Étant donné un créneau déjà réservé, quand la réservation est tentée, alors elle est refusée.",
+    "Étant donné des données incomplètes, quand le formulaire est soumis, alors la soumission est bloquée."
+  ],
+  "priority": "high",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-008-doctolib-booking.png"
+  ]
+}

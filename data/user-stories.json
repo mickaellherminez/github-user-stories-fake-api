@@ -107,5 +107,530 @@
     "images": [
       "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-005-password-reset.png"
     ]
+  },
+  {
+    "id": 6,
+    "index": "US-006",
+    "title": "Recherche géographique",
+    "description": "En tant que patient, je veux rechercher des praticiens proches de ma position afin de limiter mes déplacements.",
+    "constraints": [
+      "La position de l'utilisateur doit être autorisée.",
+      "La distance doit être calculée à partir de la localisation courante.",
+      "Les résultats doivent être triés par proximité."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné que la localisation est autorisée, quand la recherche géographique est lancée, alors les praticiens proches sont affichés.",
+      "Étant donné que la localisation est refusée, quand la recherche est lancée, alors un message d'autorisation est affiché.",
+      "Étant donné qu'aucun praticien n'est proche, quand la recherche est lancée, alors un état vide est affiché."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-006-doctolib-geographic-search.png"
+    ]
+  },
+  {
+    "id": 7,
+    "index": "US-007",
+    "title": "Filtrer les disponibilités",
+    "description": "En tant que patient, je veux filtrer les médecins disponibles dans les 48 prochaines heures afin d'obtenir un rendez-vous rapidement.",
+    "constraints": [
+      "La fenêtre de recherche est limitée aux 48 prochaines heures.",
+      "Les créneaux affichés doivent être réellement disponibles.",
+      "Les horaires passés doivent être exclus."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné des créneaux disponibles, quand le filtre 48 heures est appliqué, alors seuls les créneaux de la fenêtre sont affichés.",
+      "Étant donné des créneaux déjà réservés, quand le filtre est appliqué, alors ils sont exclus des résultats.",
+      "Étant donné qu'aucun créneau ne correspond, quand le filtre est appliqué, alors un message dédié est affiché."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-007-doctolib-48h-filter.png"
+    ]
+  },
+  {
+    "id": 8,
+    "index": "US-008",
+    "title": "Réservation d’un créneau",
+    "description": "En tant que patient, je veux réserver un créneau disponible afin de consulter un professionnel de santé.",
+    "constraints": [
+      "Le créneau doit être libre au moment de la réservation.",
+      "Le patient doit être authentifié.",
+      "Une double réservation du même créneau doit être impossible."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un patient authentifié et un créneau libre, quand la réservation est validée, alors le rendez-vous est créé.",
+      "Étant donné un créneau déjà réservé, quand la réservation est tentée, alors elle est refusée.",
+      "Étant donné des données incomplètes, quand le formulaire est soumis, alors la soumission est bloquée."
+    ],
+    "priority": "high",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-008-doctolib-booking.png"
+    ]
+  },
+  {
+    "id": 9,
+    "index": "US-009",
+    "title": "Confirmation de rendez-vous",
+    "description": "En tant que patient, je veux recevoir une confirmation après réservation afin de vérifier que mon rendez-vous est bien enregistré.",
+    "constraints": [
+      "La confirmation doit être générée après une réservation réussie.",
+      "Les détails du rendez-vous doivent être exacts.",
+      "La confirmation doit être consultable et partageable."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un rendez-vous créé, quand la réservation est finalisée, alors une confirmation est affichée.",
+      "Étant donné une erreur d'envoi, quand la confirmation ne peut pas partir, alors elle reste consultable dans l'application.",
+      "Étant donné qu'aucune réservation n'existe, quand la page de confirmation est ouverte, alors aucun reçu n'est affiché."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-009-doctolib-confirmation.png"
+    ]
+  },
+  {
+    "id": 10,
+    "index": "US-010",
+    "title": "Annulation de rendez-vous",
+    "description": "En tant que patient, je veux annuler un rendez-vous afin de libérer le créneau si je ne peux pas venir.",
+    "constraints": [
+      "Le rendez-vous doit appartenir au patient connecté.",
+      "L'annulation doit respecter le délai autorisé.",
+      "Le créneau libéré doit redevenir disponible."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un rendez-vous appartenant au patient, quand l'annulation est confirmée, alors le rendez-vous est supprimé.",
+      "Étant donné un rendez-vous annulé, quand la disponibilité est recalculée, alors le créneau redevient réservable.",
+      "Étant donné un rendez-vous introuvable, quand l'annulation est demandée, alors un message d'erreur est affiché."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-010-doctolib-cancellation.png"
+    ]
+  },
+  {
+    "id": 11,
+    "index": "US-011",
+    "title": "Reprogrammation de rendez-vous",
+    "description": "En tant que patient, je veux modifier la date de mon rendez-vous afin de choisir un horaire plus adapté.",
+    "constraints": [
+      "Le rendez-vous initial doit exister.",
+      "Le nouveau créneau doit être disponible.",
+      "La modification doit conserver le dossier du patient."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un rendez-vous existant et un nouveau créneau libre, quand la reprogrammation est validée, alors le rendez-vous est mis à jour.",
+      "Étant donné un nouveau créneau indisponible, quand la reprogrammation est tentée, alors elle est refusée.",
+      "Étant donné un rendez-vous absent, quand la reprogrammation est demandée, alors une erreur est affichée."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-011-doctolib-rescheduling.png"
+    ]
+  },
+  {
+    "id": 12,
+    "index": "US-012",
+    "title": "Rappel automatique",
+    "description": "En tant que patient, je veux recevoir un rappel 24 heures avant mon rendez-vous afin de ne pas oublier ma consultation.",
+    "constraints": [
+      "Le rappel doit être envoyé 24 heures avant le rendez-vous.",
+      "Le canal de notification doit suivre les préférences de l'utilisateur.",
+      "Les rappels annulés doivent être supprimés."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un rendez-vous prévu dans 24 heures, quand l'ordonnanceur s'exécute, alors un rappel est envoyé.",
+      "Étant donné qu'un rendez-vous est annulé, quand le rappel est recalculé, alors aucun message n'est envoyé.",
+      "Étant donné des notifications désactivées, quand le rappel arrive à échéance, alors il n'est pas diffusé."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-012-doctolib-reminder.png"
+    ]
+  },
+  {
+    "id": 13,
+    "index": "US-013",
+    "title": "Notification d’annulation médecin",
+    "description": "En tant que patient, je veux être notifié si le médecin annule le rendez-vous afin de pouvoir reprendre un autre créneau.",
+    "constraints": [
+      "Le patient doit être lié au rendez-vous annulé.",
+      "La notification doit partir dès l'annulation.",
+      "Le message doit proposer une action de reprogrammation."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné qu'un médecin annule un rendez-vous, quand l'annulation est enregistrée, alors le patient est notifié.",
+      "Étant donné une application fermée, quand l'annulation survient, alors la notification est mise en file d'attente.",
+      "Étant donné qu'aucun rendez-vous n'existe, quand une annulation est simulée, alors aucun message n'est envoyé."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-013-doctolib-doctor-cancellation.png"
+    ]
+  },
+  {
+    "id": 14,
+    "index": "US-014",
+    "title": "Accès à une téléconsultation",
+    "description": "En tant que patient, je veux rejoindre une téléconsultation vidéo afin de consulter un médecin à distance.",
+    "constraints": [
+      "Le rendez-vous doit être configuré en téléconsultation.",
+      "L'utilisateur doit disposer d'un appareil compatible.",
+      "L'accès doit être limité à l'heure du rendez-vous."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un rendez-vous de téléconsultation à l'heure prévue, quand le patient rejoint la session, alors la salle vidéo s'ouvre.",
+      "Étant donné qu'il est trop tôt, quand le patient tente de rejoindre la session, alors une salle d'attente est affichée.",
+      "Étant donné un appareil incompatible, quand l'accès est tenté, alors un message d'erreur est affiché."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-014-doctolib-teleconsultation.png"
+    ]
+  },
+  {
+    "id": 15,
+    "index": "US-015",
+    "title": "Vérification matériel vidéo",
+    "description": "En tant qu'utilisateur, je veux tester ma caméra et mon microphone avant la téléconsultation afin d'éviter les problèmes techniques.",
+    "constraints": [
+      "La caméra et le microphone doivent pouvoir être testés séparément.",
+      "Les permissions du navigateur doivent être détectées.",
+      "Un résultat clair doit être affiché avant la téléconsultation."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné que la caméra et le microphone sont autorisés, quand le test est lancé, alors le contrôle matériel réussit.",
+      "Étant donné qu'une permission est refusée, quand le test est lancé, alors l'erreur correspondante est affichée.",
+      "Étant donné qu'un périphérique est absent, quand le test est lancé, alors un avertissement est affiché."
+    ],
+    "priority": "low",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-015-doctolib-device-check.png"
+    ]
+  },
+  {
+    "id": 16,
+    "index": "US-016",
+    "title": "Téléversement d’ordonnance",
+    "description": "En tant que patient, je veux ajouter une ordonnance à mon dossier afin que le médecin puisse la consulter avant le rendez-vous.",
+    "constraints": [
+      "Le fichier doit être au format autorisé.",
+      "La taille maximale doit être respectée.",
+      "Le document doit être rattaché au dossier du patient."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un fichier valide, quand il est téléversé, alors l'ordonnance est ajoutée au dossier.",
+      "Étant donné un format non autorisé, quand le fichier est soumis, alors l'import est refusé.",
+      "Étant donné un fichier trop volumineux, quand il est soumis, alors l'import est refusé."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-016-doctolib-prescription-upload.png"
+    ]
+  },
+  {
+    "id": 17,
+    "index": "US-017",
+    "title": "Consultation historique",
+    "description": "En tant que patient, je veux consulter l'historique de mes rendez-vous afin de retrouver mes anciennes consultations.",
+    "constraints": [
+      "L'historique doit inclure les rendez-vous passés et annulés.",
+      "Les éléments doivent être triés du plus récent au plus ancien.",
+      "Seul le patient concerné doit y accéder."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un patient authentifié, quand il ouvre l'historique, alors ses rendez-vous sont affichés.",
+      "Étant donné qu'aucun rendez-vous n'existe, quand l'historique est ouvert, alors un état vide est affiché.",
+      "Étant donné un utilisateur non autorisé, quand l'historique est demandé, alors l'accès est refusé."
+    ],
+    "priority": "low",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-017-doctolib-history.png"
+    ]
+  },
+  {
+    "id": 18,
+    "index": "US-018",
+    "title": "Création de créneaux",
+    "description": "En tant que médecin, je veux définir mes créneaux disponibles afin de gérer mon planning de consultation.",
+    "constraints": [
+      "Le médecin doit être authentifié.",
+      "Les créneaux ne doivent pas se chevaucher.",
+      "Les horaires saisis doivent respecter les contraintes du planning."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un médecin authentifié, quand un créneau valide est créé, alors il est ajouté au planning.",
+      "Étant donné deux créneaux qui se chevauchent, quand ils sont enregistrés, alors le conflit est signalé.",
+      "Étant donné des champs manquants, quand le formulaire est soumis, alors la validation bloque l'enregistrement."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-018-doctolib-slot-creation.png"
+    ]
+  },
+  {
+    "id": 19,
+    "index": "US-019",
+    "title": "Blocage d’absence",
+    "description": "En tant que médecin, je veux bloquer certaines dates afin d'empêcher les réservations pendant mes congés.",
+    "constraints": [
+      "La période bloquée doit empêcher toute réservation.",
+      "Les dates d'absence doivent être vérifiées en conflit avec le planning.",
+      "Le blocage doit pouvoir être supprimé ou modifié."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné une période d'absence enregistrée, quand un patient cherche un créneau, alors les dates bloquées ne sont pas proposées.",
+      "Étant donné un conflit avec un créneau existant, quand l'absence est créée, alors le conflit est signalé.",
+      "Étant donné un blocage supprimé, quand la disponibilité est recalculée, alors les réservations redeviennent possibles."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-019-doctolib-absence-blocking.png"
+    ]
+  },
+  {
+    "id": 20,
+    "index": "US-020",
+    "title": "Gestion des retards",
+    "description": "En tant que médecin, je veux notifier mes patients en cas de retard important afin de les informer avant leur déplacement.",
+    "constraints": [
+      "Le retard doit être déclaré avant l'heure prévue de consultation si possible.",
+      "Les patients concernés doivent être notifiés.",
+      "L'information doit inclure une estimation du délai."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un retard déclaré, quand le médecin valide l'information, alors les patients concernés sont notifiés.",
+      "Étant donné qu'aucun patient n'est concerné, quand un retard est saisi, alors aucune notification n'est envoyée.",
+      "Étant donné une estimation mise à jour, quand le délai change, alors un nouveau message est diffusé."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-020-doctolib-delay-notification.png"
+    ]
+  },
+  {
+    "id": 21,
+    "index": "US-021",
+    "title": "Paiement en ligne",
+    "description": "En tant que patient, je veux payer ma consultation en ligne afin de gagner du temps lors du rendez-vous.",
+    "constraints": [
+      "Le paiement doit être associé à une consultation valide.",
+      "La méthode de paiement doit être autorisée.",
+      "Une confirmation doit être générée après succès."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné une consultation payable et une méthode valide, quand le paiement est confirmé, alors la transaction est enregistrée.",
+      "Étant donné une erreur de passerelle, quand le paiement échoue, alors aucun reçu n'est émis.",
+      "Étant donné une consultation non payable, quand le paiement est tenté, alors l'opération est bloquée."
+    ],
+    "priority": "high",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-021-doctolib-payment.png"
+    ]
+  },
+  {
+    "id": 22,
+    "index": "US-022",
+    "title": "Échec de paiement",
+    "description": "En tant que patient, je veux être informé si le paiement échoue afin de pouvoir réessayer avec une autre méthode.",
+    "constraints": [
+      "L'échec doit être clairement signalé.",
+      "L'utilisateur doit pouvoir réessayer.",
+      "Aucune confirmation ne doit être émise en cas d'échec."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un paiement refusé, quand la transaction est traitée, alors un message d'échec est affiché.",
+      "Étant donné un paiement échoué, quand l'utilisateur réessaie avec une autre méthode, alors une nouvelle tentative est possible.",
+      "Étant donné un échec confirmé, quand le flux se termine, alors aucun reçu n'est produit."
+    ],
+    "priority": "high",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-022-doctolib-payment-failure.png"
+    ]
+  },
+  {
+    "id": 23,
+    "index": "US-023",
+    "title": "Consentement RGPD",
+    "description": "En tant qu'utilisateur, je veux accepter la politique de confidentialité afin d'autoriser le traitement de mes données personnelles.",
+    "constraints": [
+      "Le consentement doit être explicite.",
+      "Le choix doit être horodaté.",
+      "Le refus ne doit pas bloquer les fonctions strictement nécessaires."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné une politique de confidentialité affichée, quand l'utilisateur accepte, alors le consentement est enregistré.",
+      "Étant donné un refus, quand le choix est validé, alors les traitements non essentiels sont désactivés.",
+      "Étant donné qu'aucun choix n'est fait, quand la page est ouverte, alors une demande de consentement reste visible."
+    ],
+    "priority": "high",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-023-doctolib-gdpr-consent.png"
+    ]
+  },
+  {
+    "id": 24,
+    "index": "US-024",
+    "title": "Suppression de compte",
+    "description": "En tant qu'utilisateur, je veux supprimer mon compte afin d'exercer mon droit à l'effacement des données.",
+    "constraints": [
+      "L'utilisateur doit être authentifié.",
+      "Les obligations légales de conservation doivent être respectées.",
+      "La suppression doit être irréversible côté utilisateur."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un utilisateur authentifié, quand il confirme la suppression, alors son compte est supprimé.",
+      "Étant donné des données soumises à conservation légale, quand la suppression est demandée, alors elles sont conservées conformément aux règles.",
+      "Étant donné un utilisateur non authentifié, quand il demande la suppression, alors l'accès est refusé."
+    ],
+    "priority": "high",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-024-doctolib-account-deletion.png"
+    ]
+  },
+  {
+    "id": 25,
+    "index": "US-025",
+    "title": "Liste d’attente",
+    "description": "En tant que patient, je veux être placé sur une liste d'attente afin d'être averti si un créneau se libère plus tôt.",
+    "constraints": [
+      "La liste d'attente doit être liée à un créneau complet.",
+      "L'ordre d'inscription doit être conservé.",
+      "L'utilisateur doit pouvoir être averti si une place se libère."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné qu'aucun créneau n'est disponible, quand le patient s'inscrit, alors il est ajouté à la liste d'attente.",
+      "Étant donné qu'une place se libère, quand l'ordre de priorité est calculé, alors les patients sont notifiés dans l'ordre d'inscription.",
+      "Étant donné une inscription déjà existante, quand le patient réessaie, alors la duplication est refusée."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-025-doctolib-waitlist.png"
+    ]
+  },
+  {
+    "id": 26,
+    "index": "US-026",
+    "title": "Multi-patients famille",
+    "description": "En tant que parent, je veux gérer les rendez-vous de mes enfants depuis mon compte afin de centraliser le suivi familial.",
+    "constraints": [
+      "Le parent doit pouvoir lier plusieurs profils enfants.",
+      "Chaque rendez-vous doit être attribué au bon patient.",
+      "Les droits d'accès doivent rester cloisonnés."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné un compte parent, quand un enfant est associé, alors son profil apparaît dans la liste familiale.",
+      "Étant donné un enfant sélectionné, quand un rendez-vous est réservé, alors il est enregistré pour le bon patient.",
+      "Étant donné un utilisateur non autorisé, quand il tente d'accéder à un autre profil, alors l'accès est refusé."
+    ],
+    "priority": "medium",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-026-doctolib-family-management.png"
+    ]
+  },
+  {
+    "id": 27,
+    "index": "US-027",
+    "title": "Priorisation urgence",
+    "description": "En tant que patient, je veux signaler une urgence potentielle lors de la prise de rendez-vous afin d'être orienté vers une prise en charge adaptée.",
+    "constraints": [
+      "Le signalement d'urgence doit être pris en compte lors de la recherche.",
+      "Le niveau d'urgence doit influencer l'orientation proposée.",
+      "Le système ne doit pas promettre de prise en charge immédiate."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné qu'un patient signale une urgence, quand il poursuit la prise de rendez-vous, alors les options d'orientation sont adaptées.",
+      "Étant donné qu'aucun créneau rapide n'existe, quand l'urgence est déclarée, alors des alternatives de prise en charge sont proposées.",
+      "Étant donné un niveau d'urgence invalide, quand il est soumis, alors la validation est refusée."
+    ],
+    "priority": "high",
+    "status": "ready",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-027-doctolib-urgent-priority.png"
+    ]
+  },
+  {
+    "id": 28,
+    "index": "US-028",
+    "title": "Rendez-vous rapide",
+    "description": "En tant que patient, je veux obtenir un rendez-vous rapidement afin d'être soigné au plus vite.",
+    "constraints": [
+      "La notion de rapidité doit rester suffisamment souple.",
+      "Le système doit proposer la première disponibilité pertinente.",
+      "Le parcours ne doit pas imposer d'étape inutile."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné qu'un patient demande un rendez-vous rapide, quand la recherche est lancée, alors les premiers créneaux pertinents sont proposés.",
+      "Étant donné qu'aucun créneau proche n'existe, quand la recherche est lancée, alors des alternatives sont affichées.",
+      "Étant donné qu'un créneau est sélectionné, quand la réservation continue, alors le flux se poursuit normalement."
+    ],
+    "priority": "low",
+    "status": "draft",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-028-doctolib-fast-appointment.png"
+    ]
+  },
+  {
+    "id": 29,
+    "index": "US-029",
+    "title": "Notifications adaptées",
+    "description": "En tant qu'utilisateur, je veux recevoir des notifications adaptées afin d'être correctement informé.",
+    "constraints": [
+      "Le contenu doit dépendre du contexte utilisateur.",
+      "La fréquence et le canal peuvent varier selon les préférences.",
+      "Les notifications inutiles doivent être limitées."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné des préférences utilisateur définies, quand une notification est envoyée, alors son contenu et son canal sont adaptés.",
+      "Étant donné que les notifications sont désactivées, quand un événement survient, alors aucun message n'est diffusé.",
+      "Étant donné un contexte qui change, quand une notification est recalculée, alors le message est ajusté."
+    ],
+    "priority": "low",
+    "status": "draft",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-029-doctolib-adaptive-notifications.png"
+    ]
+  },
+  {
+    "id": 30,
+    "index": "US-030",
+    "title": "Recherche intelligente",
+    "description": "En tant que patient, je veux une recherche intelligente de praticiens afin de trouver le meilleur médecin.",
+    "constraints": [
+      "La recherche doit exploiter plusieurs critères pertinents.",
+      "Les résultats doivent être classés par adéquation.",
+      "La notion de meilleur médecin doit rester interprétable."
+    ],
+    "acceptanceCriteria": [
+      "Étant donné une requête saisie, quand la recherche intelligente est lancée, alors des résultats classés sont affichés.",
+      "Étant donné une requête imprécise, quand elle est soumise, alors des suggestions proches sont proposées.",
+      "Étant donné qu'aucune correspondance exacte n'existe, quand la recherche se termine, alors les meilleurs rapprochements sont affichés."
+    ],
+    "priority": "medium",
+    "status": "draft",
+    "images": [
+      "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-030-doctolib-smart-search.png"
+    ]
   }
 ]

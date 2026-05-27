@@ -1,0 +1,21 @@
+{
+  "id": 18,
+  "index": "US-018",
+  "title": "Création de créneaux",
+  "description": "En tant que médecin, je veux définir mes créneaux disponibles afin de gérer mon planning de consultation.",
+  "constraints": [
+    "Le médecin doit être authentifié.",
+    "Les créneaux ne doivent pas se chevaucher.",
+    "Les horaires saisis doivent respecter les contraintes du planning."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un médecin authentifié, quand un créneau valide est créé, alors il est ajouté au planning.",
+    "Étant donné deux créneaux qui se chevauchent, quand ils sont enregistrés, alors le conflit est signalé.",
+    "Étant donné des champs manquants, quand le formulaire est soumis, alors la validation bloque l'enregistrement."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-018-doctolib-slot-creation.png"
+  ]
+}

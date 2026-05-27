@@ -45,6 +45,8 @@ GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-
 GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-stories/3.json
 GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-stories/4.json
 GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-stories/5.json
+... up to
+GET https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/user-stories/30.json
 ```
 
 ## Data Model
@@ -95,10 +97,8 @@ data/
   user-stories.json
   user-stories/
     1.json
-    2.json
-    3.json
-    4.json
-    5.json
+    ...
+    30.json
   img/
 openapi.yaml
 scripts/
@@ -115,6 +115,7 @@ Data consistency is validated in CI:
 - every `data/user-stories/{id}.json` entry must match `data/user-stories.json`
 - required fields and enums are validated
 - ids, indexes, and image URLs are validated
+- the repository currently ships 30 user stories
 
 ## License
 

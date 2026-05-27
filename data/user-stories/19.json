@@ -1,0 +1,21 @@
+{
+  "id": 19,
+  "index": "US-019",
+  "title": "Blocage d’absence",
+  "description": "En tant que médecin, je veux bloquer certaines dates afin d'empêcher les réservations pendant mes congés.",
+  "constraints": [
+    "La période bloquée doit empêcher toute réservation.",
+    "Les dates d'absence doivent être vérifiées en conflit avec le planning.",
+    "Le blocage doit pouvoir être supprimé ou modifié."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné une période d'absence enregistrée, quand un patient cherche un créneau, alors les dates bloquées ne sont pas proposées.",
+    "Étant donné un conflit avec un créneau existant, quand l'absence est créée, alors le conflit est signalé.",
+    "Étant donné un blocage supprimé, quand la disponibilité est recalculée, alors les réservations redeviennent possibles."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-019-doctolib-absence-blocking.png"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": 30,
+  "index": "US-030",
+  "title": "Recherche intelligente",
+  "description": "En tant que patient, je veux une recherche intelligente de praticiens afin de trouver le meilleur médecin.",
+  "constraints": [
+    "La recherche doit exploiter plusieurs critères pertinents.",
+    "Les résultats doivent être classés par adéquation.",
+    "La notion de meilleur médecin doit rester interprétable."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné une requête saisie, quand la recherche intelligente est lancée, alors des résultats classés sont affichés.",
+    "Étant donné une requête imprécise, quand elle est soumise, alors des suggestions proches sont proposées.",
+    "Étant donné qu'aucune correspondance exacte n'existe, quand la recherche se termine, alors les meilleurs rapprochements sont affichés."
+  ],
+  "priority": "medium",
+  "status": "draft",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-030-doctolib-smart-search.png"
+  ]
+}

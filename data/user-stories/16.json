@@ -1,0 +1,21 @@
+{
+  "id": 16,
+  "index": "US-016",
+  "title": "Téléversement d’ordonnance",
+  "description": "En tant que patient, je veux ajouter une ordonnance à mon dossier afin que le médecin puisse la consulter avant le rendez-vous.",
+  "constraints": [
+    "Le fichier doit être au format autorisé.",
+    "La taille maximale doit être respectée.",
+    "Le document doit être rattaché au dossier du patient."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un fichier valide, quand il est téléversé, alors l'ordonnance est ajoutée au dossier.",
+    "Étant donné un format non autorisé, quand le fichier est soumis, alors l'import est refusé.",
+    "Étant donné un fichier trop volumineux, quand il est soumis, alors l'import est refusé."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-016-doctolib-prescription-upload.png"
+  ]
+}

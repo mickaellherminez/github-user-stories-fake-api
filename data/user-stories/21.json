@@ -1,0 +1,21 @@
+{
+  "id": 21,
+  "index": "US-021",
+  "title": "Paiement en ligne",
+  "description": "En tant que patient, je veux payer ma consultation en ligne afin de gagner du temps lors du rendez-vous.",
+  "constraints": [
+    "Le paiement doit être associé à une consultation valide.",
+    "La méthode de paiement doit être autorisée.",
+    "Une confirmation doit être générée après succès."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné une consultation payable et une méthode valide, quand le paiement est confirmé, alors la transaction est enregistrée.",
+    "Étant donné une erreur de passerelle, quand le paiement échoue, alors aucun reçu n'est émis.",
+    "Étant donné une consultation non payable, quand le paiement est tenté, alors l'opération est bloquée."
+  ],
+  "priority": "high",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-021-doctolib-payment.png"
+  ]
+}

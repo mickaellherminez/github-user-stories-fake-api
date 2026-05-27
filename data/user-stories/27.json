@@ -1,0 +1,21 @@
+{
+  "id": 27,
+  "index": "US-027",
+  "title": "Priorisation urgence",
+  "description": "En tant que patient, je veux signaler une urgence potentielle lors de la prise de rendez-vous afin d'être orienté vers une prise en charge adaptée.",
+  "constraints": [
+    "Le signalement d'urgence doit être pris en compte lors de la recherche.",
+    "Le niveau d'urgence doit influencer l'orientation proposée.",
+    "Le système ne doit pas promettre de prise en charge immédiate."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné qu'un patient signale une urgence, quand il poursuit la prise de rendez-vous, alors les options d'orientation sont adaptées.",
+    "Étant donné qu'aucun créneau rapide n'existe, quand l'urgence est déclarée, alors des alternatives de prise en charge sont proposées.",
+    "Étant donné un niveau d'urgence invalide, quand il est soumis, alors la validation est refusée."
+  ],
+  "priority": "high",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-027-doctolib-urgent-priority.png"
+  ]
+}

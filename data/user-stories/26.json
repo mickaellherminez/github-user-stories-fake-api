@@ -1,0 +1,21 @@
+{
+  "id": 26,
+  "index": "US-026",
+  "title": "Multi-patients famille",
+  "description": "En tant que parent, je veux gérer les rendez-vous de mes enfants depuis mon compte afin de centraliser le suivi familial.",
+  "constraints": [
+    "Le parent doit pouvoir lier plusieurs profils enfants.",
+    "Chaque rendez-vous doit être attribué au bon patient.",
+    "Les droits d'accès doivent rester cloisonnés."
+  ],
+  "acceptanceCriteria": [
+    "Étant donné un compte parent, quand un enfant est associé, alors son profil apparaît dans la liste familiale.",
+    "Étant donné un enfant sélectionné, quand un rendez-vous est réservé, alors il est enregistré pour le bon patient.",
+    "Étant donné un utilisateur non autorisé, quand il tente d'accéder à un autre profil, alors l'accès est refusé."
+  ],
+  "priority": "medium",
+  "status": "ready",
+  "images": [
+    "https://raw.githubusercontent.com/mickaellherminez/github-user-stories-fake-api/main/data/img/us-026-doctolib-family-management.png"
+  ]
+}
